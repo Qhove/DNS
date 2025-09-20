@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zanix Guard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen" oncontextmenu="return false;">
+
+    <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center">
+            <div class="text-xl font-bold text-blue-600">Zanix Guard</div>
+        </div>
+    </nav>
+    
+    <section class="bg-blue-600 text-white flex-1 flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">DNS Blocklist</h1>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="text-center">
+            &copy; 2025 Zanix Qhove.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('wheel', function(e) {
+                if (e.ctrlKey) {
+                    return;
+                }
+                e.preventDefault();
+            }, { passive: false });
+            
+
+            document.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+            
+
+            document.addEventListener('keydown', function(e) {
+                const keys = ['Space', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End'];
+                if (keys.includes(e.code)) {
+                    e.preventDefault();
+                }
+            });
+
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+        });
+    </script>
+</body>
+</html>
