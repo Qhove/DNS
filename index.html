@@ -2,66 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Zanix Guard</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  body {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
+    touch-action: none;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  @media (max-height: 600px) {
+    nav {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    footer {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
   }
 </style>
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen" oncontextmenu="return false;">
+<body oncontextmenu="return false;">
 
-    <nav class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center">
-            <div class="text-xl font-bold text-blue-600">Zanix Guard</div>
+    <nav class="bg-white shadow py-2">
+        <div class="w-full px-4 flex justify-center">
+            <div class="text-lg font-bold text-blue-600">Zanix Guard</div>
         </div>
     </nav>
     
-    <section class="bg-blue-600 text-white flex-1 flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold mb-4">DNS Blocklist</h1>
+    <section class="bg-blue-600 text-white flex-grow flex items-center justify-center px-4">
+        <div class="text-center w-full max-w-md">
+            <h1 class="text-2xl font-bold mb-3">Personal DNS Filters</h1>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="text-center">
-            &copy; 2025 Zanix Qhove.
+    <footer class="bg-gray-800 text-white py-3">
+        <div class="text-center text-xs">
+            <p>&copy; 2025 Zanix Qhove.</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.addEventListener('wheel', function(e) {
-                if (e.ctrlKey) {
-                    return;
-                }
+                if (e.ctrlKey) return;
                 e.preventDefault();
             }, { passive: false });
             
-
             document.addEventListener('touchmove', function(e) {
                 e.preventDefault();
             }, { passive: false });
             
-
             document.addEventListener('keydown', function(e) {
                 const keys = ['Space', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End'];
-                if (keys.includes(e.code)) {
-                    e.preventDefault();
-                }
+                if (keys.includes(e.code)) e.preventDefault();
             });
-
+            
             document.documentElement.style.overflow = 'hidden';
             document.body.style.overflow = 'hidden';
+            
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            
+            window.addEventListener('resize', function() {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+            
+            document.body.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 0) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
+            if ('standalone' in navigator || window.matchMedia('(display-mode: standalone)').matches) {
+                document.documentElement.classList.add('standalone');
+            }
         });
     </script>
 </body>
