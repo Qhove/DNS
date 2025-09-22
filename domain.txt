@@ -11,4 +11,5 @@
 *.zanix.pp.ua
 *.qhove.pp.ua
 *.quo.pp.ua
+*.pull.pp.ua
 *.dox.pp.ua
