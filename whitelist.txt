@@ -8,3 +8,4 @@ yastatic.net
 s.youtube.com
 vortex.data.microsoft.com
 rewards.brave.com
+ac.alipay.com
