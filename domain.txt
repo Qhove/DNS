@@ -6,6 +6,7 @@
 *.800600400.xyz
 *.60609090.xyz
 *.87100100.xyz
+*.272700.xyz
 *.zanix.my.id
 *.qhove.my.id
 *.nox.my.id
