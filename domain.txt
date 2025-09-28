@@ -16,3 +16,6 @@
 *.quo.pp.ua
 *.pull.pp.ua
 *.dox.pp.ua
+*.false.pp.ua
+*.polar.pp.ua
+*.marhayu.pp.ua
