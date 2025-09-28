@@ -11,3 +11,6 @@ rewards.brave.com
 ac.alipay.com
 whois.pp.ua
 cdn.marmot-cloud.com
+os.alipayobjects.com
+at.alicdn.com
+g.alicdn.com
