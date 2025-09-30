@@ -4,3 +4,7 @@
 *.tapad-platform.tapimg.com
 *.pp.ua
 *.doescan.top
+*.google.id
+google.id
+*.google.co.id
+google.co.id
