@@ -18,6 +18,8 @@
 *.272700.xyz
 zanix.my.id
 *.zanix.my.id
+zoya.my.id
+*.zoya.my.id
 qhove.my.id
 *.qhove.my.id
 nox.my.id
