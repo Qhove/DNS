@@ -11,11 +11,14 @@
 zanix.my.id
 zoya.my.id
 qhove.my.id
+kmail.my.id
 nox.my.id
 bug.my.id
 zanix.pp.ua
 zoya.pp.ua
 qhove.pp.ua
+nailx.pp.ua
+voxa.pp.ua
 quo.pp.ua
 pull.pp.ua
 dox.pp.ua
