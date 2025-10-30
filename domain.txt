@@ -21,7 +21,8 @@ mailx.pp.ua
 voxa.pp.ua
 quo.pp.ua
 pull.pp.ua
-dox.pp.ua
 false.pp.ua
 polar.pp.ua
+sch.pp.ua
+dox.pp.ua
 marhayu.pp.ua
