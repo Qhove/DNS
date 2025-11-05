@@ -24,5 +24,6 @@ pull.pp.ua
 false.pp.ua
 polar.pp.ua
 sch.pp.ua
+yet.pp.ua
 dox.pp.ua
 marhayu.pp.ua
