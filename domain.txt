@@ -25,5 +25,5 @@ false.pp.ua
 polar.pp.ua
 sch.pp.ua
 yet.pp.ua
+trust.pp.ua
 dox.pp.ua
-marhayu.pp.ua
