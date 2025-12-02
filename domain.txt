@@ -26,4 +26,5 @@ polar.pp.ua
 sch.pp.ua
 yet.pp.ua
 trust.pp.ua
+orgs.pp.ua
 dox.pp.ua
