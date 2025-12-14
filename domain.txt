@@ -28,4 +28,5 @@ sch.pp.ua
 yet.pp.ua
 trust.pp.ua
 orgs.pp.ua
+izanix.pp.ua
 dox.pp.ua
